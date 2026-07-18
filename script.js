@@ -33,5 +33,17 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.card, .feature, .step, .gallery-item, .contact-form, .contact-info')
+document.querySelectorAll('.card, .feature, .step, .gallery-card, .contact-form, .contact-info')
   .forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+
+// Gallery tab filter
+document.querySelectorAll('.gtab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.gtab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
+    });
+  });
+});

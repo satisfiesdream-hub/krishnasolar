@@ -12,7 +12,29 @@
   <!-- NAV -->
   <nav class="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">☀️ Krishna Solar</a>
+      <a href="#" class="logo logo-brand">
+        <svg class="logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun rays -->
+          <circle cx="24" cy="18" r="7" fill="#f59e0b"/>
+          <line x1="24" y1="4" x2="24" y2="8" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="28" x2="24" y2="32" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="10" y1="18" x2="14" y2="18" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="34" y1="18" x2="38" y2="18" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="14.1" y1="8.1" x2="17" y2="11" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="31" y1="25" x2="33.9" y2="27.9" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="33.9" y1="8.1" x2="31" y2="11" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="17" y1="25" x2="14.1" y2="27.9" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Solar panel base -->
+          <rect x="6" y="33" width="36" height="10" rx="2" fill="#16a34a"/>
+          <!-- Panel grid lines -->
+          <line x1="18" y1="33" x2="18" y2="43" stroke="#bbf7d0" stroke-width="1"/>
+          <line x1="30" y1="33" x2="30" y2="43" stroke="#bbf7d0" stroke-width="1"/>
+          <line x1="6" y1="38" x2="42" y2="38" stroke="#bbf7d0" stroke-width="1"/>
+          <!-- Panel shine -->
+          <rect x="7" y="34" width="10" height="3" rx="1" fill="rgba(255,255,255,0.2)"/>
+        </svg>
+        <span class="logo-text"><span class="logo-krishna">Krishna</span><span class="logo-solar"> Solar</span></span>
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
@@ -147,13 +169,138 @@
     <div class="container">
       <h2 class="section-title">Our Installations</h2>
       <p class="section-sub">Real projects, real savings</p>
+
+      <!-- Tab filters -->
+      <div class="gallery-tabs">
+        <button class="gtab active" data-filter="all">All</button>
+        <button class="gtab" data-filter="residential">Residential</button>
+        <button class="gtab" data-filter="society">Society</button>
+        <button class="gtab" data-filter="commercial">Commercial</button>
+        <button class="gtab" data-filter="industrial">Industrial</button>
+      </div>
+
       <div class="gallery-grid">
-        <div class="gallery-item" style="background:#fde68a"><div class="gallery-label">🏠 3 kW Residential – Pune</div></div>
-        <div class="gallery-item" style="background:#bbf7d0"><div class="gallery-label">🏘️ 50 kW Society – Mumbai</div></div>
-        <div class="gallery-item" style="background:#bfdbfe"><div class="gallery-label">🏢 200 kW Commercial – Nashik</div></div>
-        <div class="gallery-item" style="background:#fecaca"><div class="gallery-label">🏭 1 MW Industrial – Aurangabad</div></div>
-        <div class="gallery-item" style="background:#e9d5ff"><div class="gallery-label">🏠 5 kW Residential – Nagpur</div></div>
-        <div class="gallery-item" style="background:#fed7aa"><div class="gallery-label">🏢 100 kW School – Kolhapur</div></div>
+
+        <!-- Residential -->
+        <div class="gallery-card" data-cat="residential">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="3 kW Residential installation Pune" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏠 3 kW Residential</h4>
+            <p class="gallery-loc">📍 Pune, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 3 kW</span><span>💰 ₹1.8L saved/yr</span><span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Society -->
+        <div class="gallery-card" data-cat="society">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="50 kW Housing Society Mumbai" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏘️ 50 kW Housing Society</h4>
+            <p class="gallery-loc">📍 Mumbai, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 50 kW</span><span>💰 ₹12L saved/yr</span><span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial -->
+        <div class="gallery-card" data-cat="commercial">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="200 kW Commercial Nashik" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏢 200 kW Commercial</h4>
+            <p class="gallery-loc">📍 Nashik, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 200 kW</span><span>💰 ₹48L saved/yr</span><span>📅 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industrial -->
+        <div class="gallery-card" data-cat="industrial">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="1 MW Industrial Aurangabad" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏭 1 MW Industrial Plant</h4>
+            <p class="gallery-loc">📍 Aurangabad, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 1 MW</span><span>💰 ₹2.4Cr saved/yr</span><span>📅 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential 2 -->
+        <div class="gallery-card" data-cat="residential">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=80" alt="5 kW Residential Nagpur" loading="lazy" />
+            <span class="gallery-badge gallery-badge-wip">🔧 Installation</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏠 5 kW Residential</h4>
+            <p class="gallery-loc">📍 Nagpur, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 5 kW</span><span>💰 ₹3L saved/yr</span><span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial / School -->
+        <div class="gallery-card" data-cat="commercial">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?w=600&q=80" alt="100 kW School Kolhapur" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏢 100 kW School</h4>
+            <p class="gallery-loc">📍 Kolhapur, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 100 kW</span><span>💰 ₹24L saved/yr</span><span>📅 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industrial 2 -->
+        <div class="gallery-card" data-cat="industrial">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=80" alt="500 kW Factory Solapur" loading="lazy" />
+            <span class="gallery-badge gallery-badge-wip">🔧 Installation</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏭 500 kW Factory</h4>
+            <p class="gallery-loc">📍 Solapur, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 500 kW</span><span>💰 ₹1.2Cr saved/yr</span><span>📅 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Society 2 -->
+        <div class="gallery-card" data-cat="society">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80" alt="80 kW Society Thane" loading="lazy" />
+            <span class="gallery-badge">✅ Completed</span>
+          </div>
+          <div class="gallery-info">
+            <h4>🏘️ 80 kW Housing Society</h4>
+            <p class="gallery-loc">📍 Thane, Maharashtra</p>
+            <div class="gallery-meta">
+              <span>⚡ 80 kW</span><span>💰 ₹19L saved/yr</span><span>📅 2023</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -213,7 +360,25 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo">☀️ Krishna Solar</span>
+        <span class="logo logo-brand">
+          <svg class="logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="18" r="7" fill="#f59e0b"/>
+            <line x1="24" y1="4" x2="24" y2="8" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="28" x2="24" y2="32" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="10" y1="18" x2="14" y2="18" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="34" y1="18" x2="38" y2="18" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="14.1" y1="8.1" x2="17" y2="11" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="31" y1="25" x2="33.9" y2="27.9" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="33.9" y1="8.1" x2="31" y2="11" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="17" y1="25" x2="14.1" y2="27.9" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="6" y="33" width="36" height="10" rx="2" fill="#16a34a"/>
+            <line x1="18" y1="33" x2="18" y2="43" stroke="#bbf7d0" stroke-width="1"/>
+            <line x1="30" y1="33" x2="30" y2="43" stroke="#bbf7d0" stroke-width="1"/>
+            <line x1="6" y1="38" x2="42" y2="38" stroke="#bbf7d0" stroke-width="1"/>
+            <rect x="7" y="34" width="10" height="3" rx="1" fill="rgba(255,255,255,0.2)"/>
+          </svg>
+          <span class="logo-text"><span class="logo-krishna">Krishna</span><span class="logo-solar"> Solar</span></span>
+        </span>
         <p>Empowering India with clean, affordable solar energy since 2015.</p>
       </div>
       <div class="footer-links">
